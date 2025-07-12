@@ -1,0 +1,56 @@
+/* src/app.css or in a <style global> block */
+:root {
+  --bg: #121212;
+  --bg-light: #1e1e1e;
+  --text: #e0e0e0;
+  --text-muted: #aaa;
+  --accent: #007d8a;
+  --border: #ccc;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation (example) */
+nav.header {
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+}
+
+nav .nav-links a {
+  color: var(--text-muted);
+}
+nav .nav-links li.active a {
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Optional: form inputs, buttons, etc. */
+input, textarea {
+  background-color: var(--bg-light);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
