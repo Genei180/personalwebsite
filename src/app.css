@@ -5,6 +5,7 @@
   --text: #e0e0e0;
   --text-muted: #aaa;
   --accent: #007d8a;
+  --accent-muted: #58eeff;
   --border: #ccc;
 }
 
@@ -14,6 +15,14 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
+}
+
+.reading-content{
+    max-width: 800px;   /* Max Width for Reading on Wide Monitors */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    /* border: 1px solid var(--border) */
 }
 
 /* Links */

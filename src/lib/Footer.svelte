@@ -2,7 +2,8 @@
     // Define your navigation links
     const links = [
         { href: '/contact', label: 'Contact' }
-        // Channels Insta & Github
+        // Channels Insta & Github & Ko-Fi?
+        // Mastadon?
         // Impressum
     ];
 </script>
@@ -13,6 +14,9 @@
         <a href="{href}">{label}</a>
     {/each}
   </ul>
+  <p>Powered by Biological AI.</p>
+  <p>Website complettly Written from Scratch with Svelte Kit.</p>
+  <p>Running on a Selfbuild Cluster</p>
 </nav>
 
 <style>

@@ -1,13 +1,11 @@
 <script>
     import { page } from '$app/state'; 
-    import logo from '$lib/assets/Logo.svg';
 
     // Defining navigation links
     const links = [
         { href: '/projects', label: 'Projects' },
         { href: '/blog', label: 'Blog' },
-        { href: '/about', label: 'About' },
-        { href: '/resume', label: 'Resume' },
+        { href: '/resume', label: 'Résumé' },
     ];
 </script>
 
@@ -15,7 +13,7 @@
 
     <a href="/" class="Home">
     <div class="logo-wrapper">
-        <img src={logo} alt="logo" class="logo"/> 
+        <img src="/assets/Logo.svg" alt="logo" class="logo"/> 
     </div>
     <div class="text-wrapper">
         <div class="name">V. Springer</div>
