@@ -5,6 +5,7 @@
     import '../app.css'; // or your specific file
 </script>
 
+<a id="top"></a>
 <div class="page-content">
     <Header />
     <slot></slot>

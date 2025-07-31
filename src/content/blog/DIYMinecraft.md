@@ -1,10 +1,11 @@
 ---
-title: Test/Example Post This is a Very Long and Dirty Title
+title: We have Minecraft at Home!
 firstPostet: 2025-07-12
 excerpt: Short and Whitty Description of this Blog Post
+image: ./Tracker.jpeg
 ---
 
-# Welcome inside the Test FOlder!
+# Welcome
 
 Some introduction.
 
@@ -19,3 +20,7 @@ Even more content.
 ## Conclusion
 
 Thanks for reading!
+
+Test of the Relative Link?
+
+![This is a Image](./Tracker.jpeg)

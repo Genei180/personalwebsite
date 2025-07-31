@@ -1,6 +1,7 @@
 ---
 title: Project 1
-date: 2025-07-12
+firstPostet: 2025-07-12
+status: Active
 ---
 
 # Welcome inside the Test FOlder!

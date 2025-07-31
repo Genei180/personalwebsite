@@ -1,20 +1,8 @@
 ---
 title: Project 2
-date: 2025-07-12
+firstPostet: 2025-07-12
+status: Archived
 ---
 
-# Welcome inside the Test FOlder!
+# Overview of the Test Copy!
 
-Some introduction.
-
-## Getting Started
-
-How to begin.
-
-### Details
-
-Even more content.
-
-## Conclusion
-
-Thanks for reading!

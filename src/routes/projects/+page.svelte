@@ -5,7 +5,7 @@
 
 <div class="reading-content">
   <h1>My Projects:</h1>
-
+  <p>Things i wanted to Document Extensivly:</p>
   <ul>
     {#each data.posts as post}
       <li>
@@ -13,7 +13,7 @@
           title={post.title}
           firstPostet={post.firstPostet}
           excerpt={post.excerpt}
-          status="In Progress"
+          status={post.status}
           link={`/projects/${post.slug}`}
         />
       </li>

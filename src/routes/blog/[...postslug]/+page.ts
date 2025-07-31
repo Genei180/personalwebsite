@@ -16,6 +16,9 @@ export async function load({ params }) {
 	const postModule = match[1]; // already eager-loaded
 	const postComponent = postModule.default;
 
+	console.log(postModule)
+	console.log(postComponent)
+
 	return { postslug, postComponent };
   } catch (e) {
 	console.log(e)

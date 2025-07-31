@@ -1,15 +1,18 @@
 <script lang="ts">
-    import Toc from '$lib/Toc.svelte';
+  import ProjectOverview from '$lib/ProjectOverview.svelte';
+  import Toc from '$lib/Toc.svelte';
   import { error } from '@sveltejs/kit';
   export let data;
 
-  const { postslug, postComponent } = data;
+  const { filesInProject, postslug, postComponent } = data;
   if (!postComponent) throw error(404, `Post "${postslug}" not found`);
+
+  // console.log(filesInProject)
 </script>
 
 <div class="blog-page">
   <aside class="overview">
-
+    <ProjectOverview filesInProject={filesInProject} activeSlug={postslug}/>
   </aside>
   <div class="reading-content" id="markdown-content">
     <svelte:component this={postComponent} />

@@ -1,49 +1,64 @@
 <script>
-    // Define your navigation links
-    const links = [
-        { href: '/contact', label: 'Contact' }
-        // Channels Insta & Github & Ko-Fi?
-        // Mastadon?
-        // Impressum
-    ];
 </script>
 
-<nav class="footer">
-  <ul class="nav-links">
-    {#each links as { href, label }}
-        <a href="{href}">{label}</a>
-    {/each}
-  </ul>
-  <p>Powered by Biological AI.</p>
-  <p>Website complettly Written from Scratch with Svelte Kit.</p>
-  <p>Running on a Selfbuild Cluster</p>
-</nav>
+<footer>
+  <div class="note">
+    <p>&copy; {new Date().getFullYear()} Vale. All rights reserved.</p>
+    <p>Powered by Biological AI. (with some supported by Technical AI)</p>
+    <p>Website complettly Written from Scratch with Svelte Kit.</p>
+    <p>Running on Self Configured, selfowned Hardware.</p>
+  </div>
+  <a href="#top" class="back-to-top">↑ Back to Top</a>
+  <div class="links">
+    <nav class="footer-links">
+      <a href='https://github.com/Genei180'>Github</a>
+      <a href='https://linkedin.com/in/Me?'>LinkedIn</a>
+      <a href='/contact'>Contact</a>
+    </nav>
+    <!-- <nav class="footer-links">
+      // Channels Insta & Github & Ko-Fi?
+      // Mastadon?
+      // Impressum
+    </nav> -->
+  </div>
+</footer>
 
 <style>
-  .footer {
+  footer {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     align-items: center;
     padding: 1rem 2rem;
     border-top: 1px solid var(--border);
+		text-align: center;
+		color: #6b7280;
+		font-size: 0.875rem;
+		margin-top: 4rem;
+	}
+
+  .back-to-top {
+    flex: 1;
   }
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+  .note {
+    text-align: left;
+    flex: 1;
   }
 
-  .nav-links a {
-    text-decoration: none;
-    color: var(--text-muted);
-    font-weight: 500;
+  .links {
+    flex: 1;
+		display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 3rem;
   }
-
-  .nav-links li.active a {
-    color: var(--accent);
-    border-bottom: 2px solid #000;
-  }
+  
+	.footer-links {
+		display: flex;
+    text-align: center;
+    flex-direction: column;
+		justify-content: right;
+		gap: 1rem;
+		margin-top: 0.5rem;
+	}
 </style>

@@ -7,6 +7,9 @@
     export let image: string = "";
 
     function formatToMMJJ(dateString: string): string {
+        if(dateString === "XX/XX/XX"){
+          return ""
+        }
         const date = new Date(dateString);
         const day = String(date.getDay()).padStart(2, '0'); // Months are 0-indexed
         const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
@@ -21,11 +24,11 @@
         <div class="blog-header">
             <div class="blog-title">{title}</div>
             {#if status != ""}
-              <div class="blog-status">{status}</div>
+              <p class="blog-status">{status}</p>
             {/if}
-            <div class="blog-date">{formatToMMJJ(firstPostet)}</div>
+            <p class="blog-date">{formatToMMJJ(firstPostet)}</p>
         </div>
-        <div class="blog-description">{excerpt}</div>
+        <p class="blog-description">{excerpt}</p>
       </div>
       {#if image != ""}
         <img src={image} alt="Blog Image"/>
@@ -71,6 +74,7 @@
 
   .blog-title{
     font-size: 2rem;
+    padding: 0;
     text-decoration: underline;
     margin-right: auto;
   }
@@ -79,8 +83,13 @@
     padding: 5px;
     float: right;
   }
+
   .blog-date{
     float: right;
     padding: 5px;
+  }
+
+  .blog-description{
+    color: var(--text)
   }
 </style>

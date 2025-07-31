@@ -43,8 +43,6 @@
         </li>
       {/each}
     </ul>
-  {:else}
-    <p><em>No headings found</em></p>
   {/if}
 </div>
 

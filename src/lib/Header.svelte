@@ -6,6 +6,7 @@
         { href: '/projects', label: 'Projects' },
         { href: '/blog', label: 'Blog' },
         { href: '/resume', label: 'Résumé' },
+        { href: '/contact', label: 'Contact' },
     ];
 </script>
 
@@ -22,8 +23,11 @@
     </a>
 
     <ul class="nav-links">
+        {#if page.url.pathname != "/"}
+          <a href="/">Home</a>
+        {/if}
         {#each links as { href, label }}
-        <li class="{ page.url.pathname === href ? 'active' : '' }">
+        <li class:active={page.url.pathname === href}>
             <a href="{href}">{label}</a>
         </li>
         {/each}

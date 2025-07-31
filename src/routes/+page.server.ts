@@ -1,7 +1,7 @@
 // src/routes/blog/+page.server.ts
 import type { PageServerLoad } from './$types';
 
-const allPosts = import.meta.glob("./**/*.md", { base: '/src/content/blog' });
+const allPosts = import.meta.glob("./**/*.md", { base: '/src/content' });
 
 export const load: PageServerLoad = async () => {
 	// console.log(allPosts)
