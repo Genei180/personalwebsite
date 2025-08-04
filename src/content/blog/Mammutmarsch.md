@@ -1,5 +1,5 @@
 ---
-title: Mammutmarsch, 100km in 24h zu Fuß!
+title: Mammutmarsch, 100km in 24h at Foot!
 firstPostet: 2025-07-12
 excerpt: Short and Whitty Description of this Blog Post
 image: ./Tracker.jpeg

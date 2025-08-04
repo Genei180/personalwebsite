@@ -58,18 +58,19 @@
     { laneTag: "hobby", date: '08.2016', heading: "Scuba Diving", content: "Got CMAS* certified", importance: "normal" },
     { laneTag: "career", date: '09.2015 - 08.2018', heading: "Technical High School", content: 'Attended Karl Arnold Technical High School in Biberach, specializing in the Field mechatronics', importance: "important" },
     { laneTag: "volunteering", date: '11.2015', heading: "School Medical Service", content: 'Joined the school medical service', importance: "normal" },
-    { laneTag: "hobby", date: '02.2016', heading: "Self-coded Perceptron for a Neuronal Network", content: "My interest in neural networks led to programming a simple perceptron. See <a href=\"/blog/Perceptron.md\">Blog Post</a>", importance: "important" },
     { laneTag: "volunteering", date: '09.2016', heading: "Lead the School Medical Team", content: 'Led the school medical team with another student', importance: "important" },
     { laneTag: "volunteering", date: '09.2016 - 08.2018', heading: "Class Representative", content: 'Acted as class representative in 12th and 13th grade with another student', importance: "important" },
-    { laneTag: "hobby", date: '07.2017', heading: "Developed Survive 4 Life", content: "Started developing a 2D side-scroller with infinite terrain and pathfinding enemies via an A* algorithm. See <a href=\"/blog/Survive4Life.md\">Blog Post</a>", importance: "important" },
+    { laneTag: "hobby", date: '10.2016', heading: "Self-coded Perceptron for a Neuronal Network", content: "My interest in neural networks led to programming a simple perceptron. See <a href=\"/blog/Perceptron.md\">Blog Post</a>", importance: "important" },
     { laneTag: "volunteering", date: '03.2017', heading: "FFW Sießen im Wald", content: 'Joined the volunteer fire department Sießen im Wald as an active responder', importance: "normal" },
     { laneTag: "volunteering", date: '03.2017 - 06-2022', heading: "Secretary", content: 'Acted as secretary of the volunteer fire department Sießen im Wald', importance: "important" },
+    { laneTag: "hobby", date: '07.2017', heading: "Developed Survive 4 Life", content: "Started developing a 2D side-scroller with infinite terrain and pathfinding enemies via an A* algorithm. See <a href=\"/blog/Survive4Life.md\">Blog Post</a>", importance: "important" },
     { laneTag: "career", date: '10.2018 - 09.2021', heading: "Dual Studies", content: 'Earned a Bachelor of Science in Computer Science at DHBW Friedrichshafen', importance: "important" },
     { laneTag: "hobby", date: '03.2018', heading: "3D Rendering Project", content: "Curious about 3D rendering, I built a website displaying a 3D cube. I learned a lot in the process. See <a href=\"/blog/Perceptron.md\">Blog Post</a>", importance: "important" },
     { laneTag: "volunteering", date: '11.2018', heading: "Youth Mentor", content: 'Became a youth mentor in the fire department Sießen im Wald', importance: "normal" },
     { laneTag: "volunteering", date: '01.2019', heading: "FFW Ulm", content: 'Joined the FFW Ulm city center department as an active responder', importance: "normal" },
     { laneTag: "volunteering", date: '11.2019', heading: "Youth Mentor", content: 'Became a youth mentor in the FFW Ulm city center department', importance: "normal" },
     { laneTag: "volunteering", date: '01.2020', heading: "HRG Ulm", content: 'Joined the rope rescue group (Höhenrettungsgruppe) in Ulm', importance: "normal" },
+    { laneTag: "hobby", date: '02.2020', heading: "Created the Landing Page for FFW Ulm", content: 'Created the Google First Ranked <a href=\"http:\/\/www.feuerwehr-ulm.de\/\">Landing Page for FFW Ulm</a> too help distinguishing requests to voluntary and official services', importance: "important" },
     { laneTag: "career", date: '09.2021 - 01.2023', heading: "Software Developer", content: 'Worked at Hensoldt Sensors GmbH Ulm', importance: "important" },
     { laneTag: "volunteering", date: '07.2021 - 10.2024', heading: "Youth Fire Department Leader", content: 'Led the youth fire department in FFW Ulm city center, responsible for planning and execution of traingings and events for the youth', importance: "important" },
     { laneTag: "personal", date: '07.2021', heading: "Mammutmarsch", content: "Walked 100 km in 24 hours at the Mammutmarsch Munich. It required stamina and determination. See <a href=\"/blog/Mammutmarsch.md\">Blog Post</a>", importance: "important" },
@@ -86,7 +87,7 @@
     { laneTag: "hobby", date: '01.2025', heading: "FISAT 1 Certification", content: "Got FISAT 1 certified and became a rope access technician", importance: "normal" },
     { laneTag: "volunteering", date: '02.2025', heading: "DLRG Ulm", content: 'Joined the German Lifesaving Association for Water Rescue (DLRG) in Ulm', importance: "normal" },
     { laneTag: "volunteering", date: '07.2025', heading: "Rescue Swimmer Silver Badge", content: 'Successfully earned the silver Water Rescue Badge', importance: "normal"},
-    { laneTag: "hobby", date: '06.2025', heading: "GPS Tracker for Rescue Forces", content: "Built and provisioned GPS trackers for the largest water event in Southern Germany, \"Nahbaden\", to help the DLRG track rescue teams. See <a href=\"/projects/DLRG-Tracker/Overview.md\">Project Post</a>", importance: "important" }
+    { laneTag: "hobby", date: '06.2025', heading: "GPS Tracker for Rescue Forces", content: "Built and provisioned GPS trackers for the largest water event in Southern Germany, \"Nahbaden\", to help the DLRG track rescue teams. See <a href=\"/projects/DLRG-GPS-Tracker/Overview.md\">Project Post</a>", importance: "important" }
   ];
 
   export let laneDescriptionForTag: { [key: string]: string } = {

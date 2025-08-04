@@ -6,8 +6,6 @@
         .sort((a, b) => new Date(b.firstPostet!).getTime() - new Date(a.firstPostet!).getTime())
         .slice(0, 5);
 
-    console.log(projectTeasers)
-
     const blogTeasers = data.posts
         .filter(post => post.slug?.startsWith("./blog/") && post.firstPostet)
         .sort((a, b) => new Date(b.firstPostet!).getTime() - new Date(a.firstPostet!).getTime())
