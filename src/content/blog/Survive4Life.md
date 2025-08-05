@@ -1,6 +1,6 @@
 ---
 title: Survive4Life, 2D Infinit Side Scroller
-firstPostet: 2025-07-12
+firstPostet: 2017-07-01
 excerpt: Selfmade DIY Mobile Game
 image: ./Survive4Life/01_Player_Running.gif
 ---
@@ -89,10 +89,10 @@ PlayerArm:x|x|x|x|
 </WorldData: Overworld>
 ```
 
-* The player has 5 coal (block ID 35) in their inventory.
+* The player has 5 coal (block ID 35) Items in their first inventory slot.
 * The armor slots are empty.
-* Player position: `X: 101.9`, `Y: 150`
-* Several blocks in chunk `(80,144)` are replaced—like the tree trunk mined to craft a pickaxe.
+* Player is in the Overworld and at Position: `X: 101.9`, `Y: 150`
+* Several blocks in chunk `(80,144)` are replaced by Air (block ID 0) identified by X,Y in Local Chunk Position and the Block ID as third Number
 
 Here’s a demo video of the building and saving system:
 
@@ -153,8 +153,8 @@ Later, I multithreaded the pathfinding system for performance gains:
 
 In the video, the monster calculates a path to the player in real time.
 
-*Blue nodes: calculated path
-*Red nodes: jump points
+-Blue nodes: calculated path
+-Red nodes: jump points
 
 ---
 
@@ -174,10 +174,10 @@ You can see the light blue optimized waypoints in the conveyor system.
 
 Survive4Life became a sandbox for learning.
 
-*Modular Code & Interfaces: I quickly learned the value of clean architecture.
-*Refactoring Early: Fixing a known problem early saves much more time later.
-*Expandable Design: I used a block-class system for world generation, allowing easy expansion for custom blocks (e.g., crafting tables, mineable ores).
-*Separation of Concerns: I built a reusable `Health` class to manage HP for both players and enemies—without mixing it into unrelated logic of the Player for Example.
+- Modular Code & Interfaces: I quickly learned the value of clean architecture.
+- Refactoring Early: Fixing a known problem early saves much more time later.
+- Expandable Design: I used a block-class system for world generation, allowing easy expansion for custom blocks (e.g., crafting tables, mineable ores).
+- Separation of Concerns: I built a reusable `Health` class to manage HP for both players and enemies—without mixing it into unrelated logic of the Player for Example.
 
 I’m proud of what I accomplished, even though the game is rough and incomplete. I hope to return to it one day. And maybe this inspired you to start your own ambitious side project.
 

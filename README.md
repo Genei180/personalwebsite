@@ -1,22 +1,23 @@
-# sv
+# This is my Personal Portfolio Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Have a browse around at [`My Site`](https://www.genei180.de)
+Powered by [`Svelte`](https://github.com/sveltejs/cli).
 
-## Creating a project
+## Main Concept
 
-If you're seeing this, you've probably already done this step. Congrats!
+The Main Idea, was to create a Personal Blog that has two Differnt Post Types.
+One Single Entry Blog Post. And on Project Posts that Accumulates Multiple Posts under a Common Goal.
 
-```bash
-# create a new project in the current directory
-npx sv create
+The Goal was to make it Possible to just render Markdown Files in either one of those Categorys and in a Way that its easy to just drag and drop Markdown Files from my Favorite Markdown Editor with some minor Editing.
 
-# create a new project in my-app
-npx sv create my-app
-```
+This Allows me to Document Projects as Extensivly and easy as i want, while still beeing able to Showcase it easily.
 
-## Developing
+Thanks to Mdsvex i can even Render Svelte Components inside the Markdown Files again if Wanted, giving me even more creative Freedom.
+For an Example see the 3D Rendering Blog Post, where i included the Javascript Canvas Renderer in the Markdown Post.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+# Getting Started Developing
+
+Once you've installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -25,7 +26,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## Building / Releasing
 
 To create a production version of your app:
 
