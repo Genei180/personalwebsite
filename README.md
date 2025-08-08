@@ -1,6 +1,6 @@
 # This is my Personal Portfolio Website
 
-Have a browse around at [`My Site`](https://www.genei180.de)
+Have a browse around at [`My Site`](https://www.genei180.com)
 Powered by [`Svelte`](https://github.com/sveltejs/cli).
 
 ## Main Concept
