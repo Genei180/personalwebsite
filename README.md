@@ -28,6 +28,12 @@ npm run dev -- --open
 
 ## Building / Releasing
 
+### Automatic Deploy to netlify
+
+For now: [![Netlify Status](https://api.netlify.com/api/v1/badges/8a76cfad-7fb2-42b4-a6ae-2b5d5685fe25/deploy-status)](https://app.netlify.com/projects/genei180/deploys)
+
+### Future upgrade to Containers and Selfhosting 
+
 To create a production version of your app:
 
 ```bash
