@@ -1,7 +1,7 @@
 # This is my Personal Portfolio Website
 
 Have a browse around at [`My Site`](https://www.genei180.com)
-Powered by [`Svelte`](https://github.com/sveltejs/cli).
+Powered by [`Svelte`](https://github.com/sveltejs/svelte).
 
 ## Main Concept
 
@@ -13,7 +13,7 @@ The Goal was to make it Possible to just render Markdown Files in either one of 
 This Allows me to Document Projects as Extensivly and easy as i want, while still beeing able to Showcase it easily.
 
 Thanks to Mdsvex i can even Render Svelte Components inside the Markdown Files again if Wanted, giving me even more creative Freedom.
-For an Example see the 3D Rendering Blog Post, where i included the Javascript Canvas Renderer in the Markdown Post.
+For an Example see the [3D Rendering Blog Post](https://genei180.com/blog/ItsACube.md), where i included the fully interactive Javascript Canvas renderer in the Markdown Post.
 
 # Getting Started Developing Locally
 
