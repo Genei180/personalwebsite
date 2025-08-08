@@ -1,11 +1,11 @@
 <script lang="ts">
-  const importanceOrder = ['important', 'normal', 'notImportant'] as const;
+  const importanceOrder = ['important', 'normal'] as const;
   type ImportanceKey = typeof importanceOrder[number];
 
   const Importance: Record<ImportanceKey, string> = {
     important: "Most Important",
     normal: "Normal",
-    notImportant: "Everything!",
+    // notImportant: "Everything!",
   }
 
   // Button Selector
@@ -64,8 +64,8 @@
     { laneTag: "volunteering", date: '03.2017', heading: "FFW Sießen im Wald", content: 'Joined the volunteer fire department Sießen im Wald as an active responder', importance: "normal" },
     { laneTag: "volunteering", date: '03.2017 - 06-2022', heading: "Secretary", content: 'Acted as secretary of the volunteer fire department Sießen im Wald', importance: "important" },
     { laneTag: "hobby", date: '07.2017', heading: "Developed Survive 4 Life", content: "Started developing a 2D side-scroller with infinite terrain and pathfinding enemies via an A* algorithm. See <a href=\"/blog/Survive4Life.md\">Blog Post</a>", importance: "important" },
-    { laneTag: "career", date: '10.2018 - 09.2021', heading: "Dual Studies", content: 'Earned a Bachelor of Science in Computer Science at DHBW Friedrichshafen', importance: "important" },
     { laneTag: "hobby", date: '03.2018', heading: "3D Rendering Project", content: "Curious about 3D rendering, I built a website rendering a 3D cube from the ground up. I learned a lot in the process. See <a href=\"/blog/ItsACube.md\">Blog Post</a>", importance: "important" },
+    { laneTag: "career", date: '10.2018 - 09.2021', heading: "Dual Studies", content: 'Earned a Bachelor of Science in Computer Science at DHBW Friedrichshafen', importance: "important" },
     { laneTag: "volunteering", date: '11.2018', heading: "Youth Mentor", content: 'Became a youth mentor in the fire department Sießen im Wald', importance: "normal" },
     { laneTag: "volunteering", date: '01.2019', heading: "FFW Ulm", content: 'Joined the FFW Ulm city center department as an active responder', importance: "normal" },
     { laneTag: "volunteering", date: '11.2019', heading: "Youth Mentor", content: 'Became a youth mentor in the FFW Ulm city center department', importance: "normal" },

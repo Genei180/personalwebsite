@@ -112,7 +112,7 @@ Despite my best efforts, we hit a few snags:
 
 * **Time** was a very Limiting Factor, not allowing for real Testing at the End.
 * **GPS imprecision** made accurate positioning difficult
-* The **website had a noticeable delay** when refreshing, reducing the system's usefulness in real-time
+* The **external website had a noticeable delay** when refreshing, reducing the system's usefulness in real-time
 * The **HT pipes slightly expanded** with heat, creating minor issues with fit and waterproofing
 
 Still, the core idea was validated.
