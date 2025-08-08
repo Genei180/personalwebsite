@@ -4,8 +4,8 @@ import nodemailer from 'nodemailer';
 // Create reusable transporter (adjust to your SMTP settings)
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST, // e.g. "smtp.gmail.com"
-  port: 587, // or 465 for SSL
-  secure: false, // true for port 465
+  port: 465, 
+  secure: true,
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS

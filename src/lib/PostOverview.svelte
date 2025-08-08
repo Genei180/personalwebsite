@@ -41,8 +41,7 @@
     aspect-ratio: 1 / 1;
     height: 150px;
     object-fit: contain;
-    border: 1px solid var(--border);
-    background-color: whitesmoke;
+    background-color: var(--bg-light);
     border-radius: 12px;
   }
   .blog-wrapper {
@@ -91,5 +90,12 @@
 
   .blog-description{
     color: var(--text)
+  }
+
+  @media (max-width: 800px) {
+
+    .blog-overview{
+      flex-direction: column-reverse;
+    }
   }
 </style>
