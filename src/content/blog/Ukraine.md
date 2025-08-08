@@ -4,7 +4,7 @@ firstPostet: 2023-10-19
 excerpt: My Experience of a Humanitary Aid Mission to Ukraine
 image: ./Ukraine/Group.jpg
 ---
-# Ukraine – A Glimpse into Life During War
+# Humanitary Aid in Ukraine
 
 It has been over a year and a half since the war in Ukraine began on February 24, 2022. In that time, around 6.28 million people have fled the country—an enormous share of its 43.79 million residents (as of 2021). Civilian casualties are staggering: 9,511 recorded deaths and 17,206 injuries, though the real numbers are likely higher at the Time.
 

@@ -1,29 +1,25 @@
-const allPosts = import.meta.glob("$content/blog/**/*.md", { eager: true });
+const allPosts = import.meta.glob("./**/*.md",  { base: '/src/content/blog', eager: true });
 
 export async function load({ params }) {
   const { postslug } = params;
 
   try {
-	// Find post whose path ends with the slug
-	const match = Object.entries(allPosts).find(([path]) =>
-		path.endsWith(`blog/${postslug}`)
+	// Find All Files who are in Blog Folder
+	const blogPosts = Object.entries(allPosts).find(([path]) =>
+		path.includes(`${postslug}`)
 	);
 
-	if (!match) {
+	if (!blogPosts) {
 		throw new Error(`Post not found: ${postslug}`);
-	}
-
-	const postModule = match[1]; // already eager-loaded
+	}	
+	const postModule = blogPosts[1];
 	const postComponent = postModule.default;
-
-	console.log(postModule)
-	console.log(postComponent)
 
 	return { postslug, postComponent };
   } catch (e) {
 	console.log(e)
     return {
-      postslug,
+      postslug: postslug,
       postComponent: null
     };
   }

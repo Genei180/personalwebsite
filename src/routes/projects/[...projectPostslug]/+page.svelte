@@ -8,6 +8,14 @@
   if (!postComponent) throw error(404, `Post "${postslug}" not found`);
 
   // console.log(filesInProject)
+
+  // import { onMount } from 'svelte';
+  // import mermaid from 'mermaid';
+
+  // // onMount(() => {
+  // //   mermaid.initialize({ startOnLoad: true });
+  // //   console.log("Loaded Mermaid!")
+  // // });
 </script>
 
 <div class="blog-page">
@@ -74,8 +82,10 @@
   .toc-sidebar {
     display: none;
   }
-  .overview{
-    display: none;
+
+  .blog-page {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

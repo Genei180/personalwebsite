@@ -1,19 +1,40 @@
+<!-- src/lib/ProjectOverview.svelte -->
 <script lang="ts">
-  export let filesInProject;
-  export let activeSlug;
+  import TreeNode from '$lib/TreeNode.svelte';
 
-  const ProjectName = activeSlug.split("/")[0]
+  export let filesInProject: [string][];
+  export let activeSlug: string;
+
+  const ProjectName = activeSlug.split("/")[0];
+
+  type TreeNodeType = {
+    [name: string]: TreeNodeType | { __filePath: string };
+  };
+
+  const tree: TreeNodeType = {};
+
+  for (const [filePath] of filesInProject) {
+    const cleaned = filePath.replace(/^\.\/[^/]+\//, '');
+    const parts = cleaned.split('/');
+    let current = tree;
+
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i];
+      if (i === parts.length - 1) {
+        current[part] = { __filePath: filePath };
+      } else {
+        current[part] ??= {};
+        current = current[part] as TreeNodeType;
+      }
+    }
+  }
 </script>
 
 <div>
   <h1>{ProjectName}</h1>
-  <ul class="nav-links">
-    {#each filesInProject as file}
-      <li class:active={file[0].includes(activeSlug)}>
-        <a data-sveltekit-reload href={`/projects/${file[0]}`}>
-          {file[0].replace(/^\.\/[^/]+\//, '')}
-        </a>
-      </li>
+  <ul class="nav-tree">
+    {#each Object.entries(tree) as [name, value]}
+      <TreeNode {name} {value} {activeSlug} />
     {/each}
   </ul>
 </div>
@@ -23,24 +44,13 @@ div {
   padding: 0 20px;
 }
 
-.nav-links {
+.nav-tree {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 500;
+.nav-tree > li {
+  margin-bottom: 1rem;
 }
-
-.nav-links li.active a {
-  color: var(--accent);
-  border-bottom: 2px solid #000;
-}
-
 </style>

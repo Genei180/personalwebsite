@@ -2,7 +2,7 @@
 title: We have Minecraft at Home!
 firstPostet: 2016-02-01
 excerpt: My Interest in Perlin Noise cumulated in a Small Minecraft clone
-image: /Minecraft/MinecraftAtHome.jpg
+image: ./Minecraft/MinecraftAtHome.jpg
 ---
 
 # Perlin Noise 

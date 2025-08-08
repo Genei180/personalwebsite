@@ -1,6 +1,9 @@
 <script lang="ts">
     import PostOverview from '$lib/PostOverview.svelte';
     export let data;
+
+    // Sort it by Date
+    data.posts.sort((a, b) => new Date(b.firstPostet!).getTime() - new Date(a.firstPostet!).getTime())
 </script>
 
 <div class="reading-content">

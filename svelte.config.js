@@ -1,5 +1,5 @@
 import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import path from 'path';
 
@@ -9,6 +9,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 import rehypeAddLinkReload from './rehype-plugins/rehype-force-reload-links.js'
 import rehypeMaxWidthMediaElements from './rehype-plugins/rehype-max-media-width.js'
+import rehypeMermaid from 'rehype-mermaid';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -34,11 +35,17 @@ const config = {
 						type: 'element',
 						tagName: 'span',
 						properties: { className: ['link-icon'] },
-						children: [{ type: 'text', value: ' 🔗' }]
+						children: [{ type: 'text', value: ''}] // '🔗'
 					}
 				}], //Adds Links to Headings
 				rehypeAddLinkReload,
 				rehypeMaxWidthMediaElements
+				// [ rehypeMermaid,
+				// {
+				// 	strategy: 'inline-svg', // render to SVG at build time
+				// 	// theme: 'dark',       // or 'dark', 'forest', etc.
+				// }
+				// ]
 			]
 		})],
 	kit: { 
@@ -47,12 +54,6 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter() },
 		extensions: ['.svelte', '.md'],
-
-		kit: {
-			alias: {
-				$content: path.resolve('src/content/'),
-			},
-		}
 };
 
 export default config;

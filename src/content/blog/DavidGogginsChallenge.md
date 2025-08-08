@@ -1,7 +1,7 @@
 ---
 title: 2 Days, ~80 km – The David Goggins 4x4x48 Challenge
 firstPostet: 2021-03-10
-excerpt: A Special CHallenge to Test our Endurance for training for an Ultra Marathon
+excerpt: A Special Challenge to Test our Endurance for training for an Ultra Marathon
 ---
 
 # 2 Days, ~80 km – The David Goggins 4x4x48 Challenge

@@ -87,7 +87,7 @@
     { laneTag: "hobby", date: '01.2025', heading: "FISAT 1 Certification", content: "Got FISAT 1 certified and became a rope access technician", importance: "normal" },
     { laneTag: "volunteering", date: '02.2025', heading: "DLRG Ulm", content: 'Joined the German Lifesaving Association for Water Rescue (DLRG) in Ulm', importance: "normal" },
     { laneTag: "volunteering", date: '07.2025', heading: "Rescue Swimmer Silver Badge", content: 'Successfully earned the silver Water Rescue Badge', importance: "normal"},
-    { laneTag: "hobby", date: '06.2025', heading: "GPS Tracker for Rescue Forces", content: "Built and provisioned GPS trackers for the largest water event in Southern Germany, \"Nahbaden\", to help the DLRG track rescue teams. See <a href=\"/projects/DLRG-GPS-Tracker/Overview.md\">Project Post</a>", importance: "important" }
+    { laneTag: "hobby", date: '06.2025', heading: "GPS Tracker for Rescue Forces", content: "Built and provisioned GPS trackers for the largest water event in Southern Germany, \"Nahbaden\", to help the DLRG track rescue teams. See <a href=\"/blog/DLRGTracking.md\">Blog Post</a>", importance: "important" }
   ];
 
   export let laneDescriptionForTag: { [key: string]: string } = {
