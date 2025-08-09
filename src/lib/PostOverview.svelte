@@ -93,8 +93,11 @@
   }
 
   @media (max-width: 800px) {
-
     .blog-overview{
+      flex-direction: column-reverse;
+    }
+
+    .blog-header{
       flex-direction: column-reverse;
     }
   }
