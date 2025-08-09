@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+
   const importanceOrder = ['important', 'normal'] as const;
   type ImportanceKey = typeof importanceOrder[number];
 
@@ -18,6 +20,21 @@
     selectedImportance = option;
     onSelect(option);
   }
+
+  let headerVisible = true;
+  onMount(() => {
+    const tableWrapper = document.getElementById('wrapper');
+    const stickyHeader = document.getElementById('sticky-header');
+
+    tableWrapper.addEventListener('scroll', () => {
+      const triggerOffset = 750; // px down before header shows
+      if (tableWrapper.scrollTop > triggerOffset) {
+        headerVisible = true;
+      } else {
+        headerVisible = false;
+      }
+    });
+  });
 
   function isDimmed(
     elementImportance: ImportanceKey,
@@ -140,7 +157,20 @@
   {/each}
 </div>
 
-<table>
+<div class="table-wrapper" id="wrapper">
+<table id="table">
+  <thead id="sticky-header" class:visible={headerVisible}>
+      <tr>
+        <th></th>
+        {#each laneTags as laneTag}
+          <th>
+            <div class="branch-lane-name {laneTag}">
+              {laneDescriptionForTag[laneTag]}
+            </div>
+          </th>
+        {/each}
+      </tr>
+    </thead>
   <tbody>
     {#each entries as entry }
         <tr>
@@ -180,9 +210,37 @@
     {/each}
   </tbody>
 </table>
+</div>
 
 
 <style>
+.table-wrapper {
+  overflow-x: auto;   /* Enables horizontal scroll on Mobile */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  height: calc(90vh - 100px); /* full height minus header and footer */
+  /* See https://www.taniarascia.com/horizontal-scroll-fixed-headers-table/ */
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Force table to be wider than small screens */
+  margin-top: -150px;
+}
+
+#sticky-header {
+  overflow: hidden;
+  height: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  opacity: 0;               /* hidden until scroll threshold */
+  transition: opacity 0.3s ease;
+}
+
+#sticky-header.visible {
+  opacity: 1;
+}
 
 .selector {
     display: flex;
@@ -238,7 +296,7 @@
   width: 0.5rem;
 }
 
-.event-heading.personal {
+.personal {
   color: #4f46e5;
 }
 
@@ -247,11 +305,10 @@
 }
 
 .branch-lane.personal{
-  color: #4f46e5;
   border-color: #4f46e5 !important;
 }
 
-.event-heading.hobby {
+.hobby {
   color: #ff0055;
 }
 
@@ -264,7 +321,7 @@
   border-color: #ff0055;
 }
 
-.event-heading.volunteering {
+.volunteering {
   color: #00ff37;
 }
 
@@ -277,7 +334,6 @@
 }
 
 .branch-lane.volunteering{
-  color: #00ff37;
   border-color: #00ff37;
 } 
 
@@ -297,7 +353,6 @@
   line-height: 1.2;
   align-self: center;
   vertical-align: middle;
-  color: var(--text)
 }
 
 .event-content {
@@ -312,6 +367,7 @@ table {
   border-spacing: 0;
   font-family: sans-serif;
   table-layout: auto;
+  position: relative;
 }
 
 td {

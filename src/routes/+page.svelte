@@ -189,4 +189,10 @@
     .connect-container {
         flex: 1;
     }
+
+	@media (max-width: 800px) {
+		.connect {
+			flex-direction: column;
+		}
+	}
 </style>
