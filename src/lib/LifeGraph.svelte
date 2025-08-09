@@ -21,7 +21,7 @@
     onSelect(option);
   }
 
-  let headerVisible = true;
+  let headerVisible = false;
   onMount(() => {
     const tableWrapper = document.getElementById('wrapper');
     const stickyHeader = document.getElementById('sticky-header');
